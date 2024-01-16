@@ -1,4 +1,4 @@
-name: torch
+name: cnn
 channels:
   - conda-forge
 dependencies:
@@ -8,5 +8,3 @@ dependencies:
   - torchaudio
   - ipykernel
   - matplotlib
-  - autopep8
-prefix: /opt/homebrew/Caskroom/miniforge/base/envs/torch

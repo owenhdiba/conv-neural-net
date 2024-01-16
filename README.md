@@ -30,7 +30,7 @@ The more complex architecture is a 5-layer CNN with 122270 parameters:
 _Table 2_: architecture for the more complex CNN model. Adapted from Example 6.3 in [[1]](#References).
 
 An example plot from the notebook, showing the loss during training of the second model, is shown below:
-![_Figure 1_: Loss of the CNN during training.](https://github.com/owenhdiba/conv-neural-net/blob/main/loss.pdf)
+![_Figure 1_: Loss of the CNN during training.](/example_loss.png)
 
 ## Installation
 1. Ensure you have Conda and Jupyter installed.
@@ -49,8 +49,8 @@ An example plot from the notebook, showing the loss during training of the secon
    ```
  6. Add a Jupyter kernel for this environment
  	```sh
-   	python -m ipykernel install --user --name=cnn --display-name "cnn”
-   	```
+   python -m ipykernel install --user --name=cnn --display-name "cnn”
+   ```
 	
 ## Usage 
 
@@ -70,7 +70,7 @@ Using a Macbook Pro (2021) with an M1 chip, 15 epochs of training, and testing t
 
 The original purpose of this project was to reproduce Example 6.3 in [_Machine Learning - A First Course for Engineers and Scientists_](http://smlbook.org) [[1]](#References). The architecture in table 2 and the optimization parameters I use are  taken from this example. 
 
-Whilst _Machine Learning - A First Course..._ gives a good overview of CNNs,  it does not provide a detailed explanation of the back-propagation algorithm. I spent some time deriving the forwards and backwards equations myself. If you are interested I have included my notes on the derivation in `cnn.pdf`.
+Whilst _Machine Learning - A First Course..._ gives a good overview of CNNs,  it does not provide a detailed explanation of the back-propagation algorithm. I spent some time deriving the forwards and backwards equations myself. If you are interested I have included my notes on the derivation in `cnn_notes.pdf`.
 
 ## References
 
