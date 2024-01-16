@@ -1,8 +1,15 @@
 # conv-neural-net
-
+# Contents
+- [Overview](#Overview)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Further Information](#Further-Information)
+- [References](#References)
 ## Overview
 This repo includes a module (`cnn.py`) I wrote to build and train a convolutional neural network (CNN) without recourse to dedicated machine learning libraries. It also includes a Jupyter notebook, `cnn_mnist.ipynb`, where I test the module on the MNIST dataset, using two different CNN architectures (one quite simple, and another a bit more complex), and then benchmark these results with a PyTorch CNN model. The file `trainer.py` includes a class which trains and tests a PyTorch neural net and records the history of the training for comparison with my own neural net framework. The simple network is a 3-layer CNN with a single convolutional layer and two dense layers, altogether having 232662 learnable coefficients:
 
+<div align="center">
+	
 |                                 |Layer 1|Layer 2|Layer 3|
 |---------------------------------|-------|-------|-------|
 |Layer type                       | conv  |dense  | dense |
@@ -14,9 +21,12 @@ This repo includes a module (`cnn.py`) I wrote to build and train a convolutiona
 |Number of parameters  (including bias)            |52   |230600    |2010|
 
 _Table 1_: architecture for the simple CNN model.
+</div>
 
 The more complex architecture is a 5-layer CNN with 122270 parameters:
 
+<div align="center" >
+	
 |                                 |Layer 1|Layer 2|Layer 3|Layer 4|Layer 5|
 |---------------------------------|-------|-------|-------|-------|-------|
 |Layer type                       | conv  | conv  | conv  |dense  | dense |
@@ -28,13 +38,22 @@ The more complex architecture is a 5-layer CNN with 122270 parameters:
 |Number of parameters  (including bias)            |104    |808    |1548   | 117800|   2010|
 
 _Table 2_: architecture for the more complex CNN model. Adapted from Example 6.3 in [[1]](#References).
+</div>
 
-An example plot from the notebook, showing the loss during training of the second model, is shown below:
-![_Figure 1_: Loss of the CNN during training.](/example_loss.png)
+An example plot from the notebook, showing the loss during training of the second model, is shown below	
+<p align="center">
+  <img
+  src="/example_loss.png" width="65%">	
+</p>
+<p align="center">	
+  <em> Figure 1: </em> loss of the CNN during training.
+</p> 
+
+
 
 ## Installation
 1. Ensure you have Conda and Jupyter installed.
-2. Clone the repo
+2. Clone the repository
    ```sh
    git clone https://github.com/owenhdiba/conv-neural-net.git
    ```
@@ -47,9 +66,9 @@ An example plot from the notebook, showing the loss during training of the secon
    ```sh
    conda activate cnn
    ```
- 6. Add a Jupyter kernel for this environment
- 	```sh
-   python -m ipykernel install --user --name=cnn --display-name "cnn”
+6. Add a Jupyter kernel for this environment
+   ```sh
+   python -m ipykernel install --user --name=cnn --display-name cnn
    ```
 	
 ## Usage 
@@ -70,7 +89,7 @@ Using a Macbook Pro (2021) with an M1 chip, 15 epochs of training, and testing t
 
 The original purpose of this project was to reproduce Example 6.3 in [_Machine Learning - A First Course for Engineers and Scientists_](http://smlbook.org) [[1]](#References). The architecture in table 2 and the optimization parameters I use are  taken from this example. 
 
-Whilst _Machine Learning - A First Course..._ gives a good overview of CNNs,  it does not provide a detailed explanation of the back-propagation algorithm. I spent some time deriving the forwards and backwards equations myself. If you are interested I have included my notes on the derivation in `cnn_notes.pdf`.
+Whilst _Machine Learning - A First Course..._ gives a good overview of CNNs,  it does not provide a detailed explanation of the back-propagation algorithm. I spent some time deriving the forwards and backwards equations myself. If you are interested I have included my notes on the derivation in (`cnn_notes.pdf`)[/cnn_notes.pdf].
 
 ## References
 
