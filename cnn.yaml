@@ -1,0 +1,12 @@
+name: torch
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - torchvision
+  - pytorch::pytorch
+  - torchaudio
+  - ipykernel
+  - matplotlib
+  - autopep8
+prefix: /opt/homebrew/Caskroom/miniforge/base/envs/torch
