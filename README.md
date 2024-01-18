@@ -89,7 +89,7 @@ Using a Macbook Pro (2021) with an M1 chip, 15 epochs of training, and testing t
 
 The original purpose of this project was to reproduce Example 6.3 in [_Machine Learning - A First Course for Engineers and Scientists_](http://smlbook.org) [[1]](#References). The architecture in table 2 and the optimization parameters I use are  taken from this example. 
 
-Whilst _Machine Learning - A First Course..._ gives a good overview of CNNs,  it does not provide a detailed explanation of the back-propagation algorithm. I spent some time deriving the forwards and backwards equations myself. If you are interested I have included my notes on the derivation in (`cnn_notes.pdf`)[/cnn_notes.pdf].
+Whilst _Machine Learning - A First Course..._ gives a good overview of CNNs,  it does not provide a detailed explanation of the back-propagation algorithm. I spent some time deriving the forwards and backwards equations myself. If you are interested I have included my notes on the derivation in [`cnn_notes.pdf`](cnn_notes.pdf).
 
 ## References
 
